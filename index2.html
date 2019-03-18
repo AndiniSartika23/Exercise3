@@ -1,0 +1,168 @@
+<!Doctype html>
+<html>
+
+
+<head>
+    <title>Filter Data Tabel dengan Javascript</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wripper">
+        <div id="konten">
+            <center>
+                <h2>Cari Data : <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Berdasarkan Nama" title="Type in a name"> </h2>
+            </center>
+            <br/>
+            <div id="customers">
+                <table id="myTable" border="0" align="center">
+                    <tr>
+                        <th>Name</th>
+                        <th>rotation_period</th>
+                        <th>orbital_period</th>
+                        <th>diameter</th>
+                        <th>climate</th>
+                        <th>gravity</th>
+                        <th>terrain</th>
+                        <th>surface_water</th>
+                        <th>population</th>
+
+                    </tr>
+                    <tr>
+                        <td>Alderaan</td>
+                        <td>24</td>
+                        <td>364</td>
+                        <td>12500</td>
+                        <td>temperate</td>
+                        <td>1 standard</td>
+                        <td>grasslands, mountains </td>
+                        <td>40</td>
+                        <td>2000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Yavin IV</td>
+                        <td>24</td>
+                        <td>4818</td>
+                        <td>10200</td>
+                        <td>temperate, tropical</td>
+                        <td>1 standard</td>
+                        <td>jungle, rainforest</td>
+                        <td>8</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Hoth</td>
+                        <td>23</td>
+                        <td>549</td>
+                        <td>7200</td>
+                        <td>frozen</td>
+                        <td>1.1 standard</td>
+                        <td>tundra, ice caves, mountains ranges</td>
+                        <td>100</td>
+                        <td>Unknown</td>
+                    </tr>
+                    <tr>
+                        <td>Dagobah</td>
+                        <td>23</td>
+                        <td>341</td>
+                        <td>8900</td>
+                        <td>murky</td>
+                        <td>N/A</td>
+                        <td>swamp, jungles</td>
+                        <td>8</td>
+                        <td>Unknown</td>
+                    </tr>
+                    <tr>
+                        <td>Bespin</td>
+                        <td>12</td>
+                        <td>5110</td>
+                        <td>118000</td>
+                        <td>temperate</td>
+                        <td>1.5 (surface), 1 standard (Cloud City)</td>
+                        <td>gas giant</td>
+                        <td>0</td>
+                        <td>6000000</td>
+                    </tr>
+                    <tr>
+                        <td>Endor</td>
+                        <td>18</td>
+                        <td>402</td>
+                        <td>4900</td>
+                        <td>temperate</td>
+                        <td>0.85 standard</td>
+                        <td>forests, mountains, lakes</td>
+                        <td>8</td>
+                        <td>30000000</td>
+                    </tr>
+                    <tr>
+                        <td>Naboo</td>
+                        <td>26</td>
+                        <td>312</td>
+                        <td>12120</td>
+                        <td>temperate</td>
+                        <td>1 standard</td>
+                        <td>grassy hills, swamps, forest, mountains</td>
+                        <td>12</td>
+                        <td>4500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Coruscant</td>
+                        <td>24</td>
+                        <td>368</td>
+                        <td>12240</td>
+                        <td>temperate</td>
+                        <td>1 standard</td>
+                        <td>cityscape, mountains</td>
+                        <td>Unknown</td>
+                        <td>1000000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Kamino</td>
+                        <td>27</td>
+                        <td>463</td>
+                        <td>19720</td>
+                        <td>temperate</td>
+                        <td>1 standard</td>
+                        <td>ocean</td>
+                        <td>100</td>
+                        <td>100000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Geonosis</td>
+                        <td>30</td>
+                        <td>256</td>
+                        <td>11370</td>
+                        <td>temperate, arid</td>
+                        <td>0.9 standard</td>
+                        <td>rock, dessert, mountains, barren</td>
+                        <td>5</td>
+                        <td>100000000000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</head>
+
+</html>
